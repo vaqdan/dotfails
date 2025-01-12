@@ -28,3 +28,6 @@ export VISUAL=$EDITOR
 
 # add local bin to PATH
 export PATH=$HOME/.local/bin:$PATH
+
+# initialize Startship
+eval "$(starship init bash)"
