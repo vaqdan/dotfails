@@ -28,4 +28,4 @@ alias cal='ncal -bM'
 mkcd() { mkdir "$1" && cd "$1"; }
 mkcp() { mkdir "$1" && cp "${@:2}" "$1"; }
 
-alias wttr="curl 'wttr.in/Palmones?m&lang=es&format=2'"
+alias wttr="curl 'wttr.in/$LOCATION?m&lang=es&format=2'"
