@@ -1,17 +1,25 @@
+# Do not print a new line at teh start of the prompt
+#add_newline = false
+
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = true
 
 [cmd_duration]
 min_time = 500
-format = 'underwent [$duration](bold yellow)'
+show_milliseconds = true
+format = 'took [$duration](bold yellow) '
 
 [directory]
-truncation_length = 8
 truncation_symbol = '…/'
 
+#[env_var.USER]
+#default = 'john doe'
+
 [git_branch]
-symbol = '🌱 '
-truncation_length = 4
-truncation_symbol = ''
-#ignore_branches = ['master', 'main']
+#symbol = '🌱 '
+symbol = ''
+#truncation_symbol = ''
 
 [git_commit]
 commit_hash_length = 4
@@ -21,14 +29,53 @@ tag_symbol = '🔖 '
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = '[🍒 PICKING](bold red)'
 
+[git_metrics]
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue) on [$hostname](bold red)'
+disabled = true
+
+[jobs]
+number_threshold = 4
+
+[localip]
+format = '@[$localipv4](bold red)'
+
+[shell]
+style = 'cyan bold'
+disabled = false
+
+[sudo]
+symbol = 'root '
+style = 'bold red'
+disabled = false
+
+[package]
+disabled = true
+
 [c]
-format = 'via [$name $version]($style)'
+format = 'via [$name $version]($style) '
 
 [haskell]
 format = 'via [$symbol($version )]($style)'
 
 [java]
-symbol = '☕ '
 style = 'red'
 
 [lua]
